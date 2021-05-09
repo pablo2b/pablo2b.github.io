@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>Discernir entre el contenido ejecutable y texto plano</li>
 
+<li>Draft of 'Elementos de x86asm'</li>
+
 <li>Edición</li>
 
 <li>El ejecutable</li>
@@ -330,6 +332,8 @@ Error message and password prompt
 <li>Representación intermedia: Código ensamblador</li>
 
 <li>Tabla de contenidos</li>
+
+<li>Transpilación entre código máquina y código fuente</li>
 
 </ul>
 </p>
@@ -12937,7 +12941,7 @@ Error message and password prompt
 <pre>show</pre>
 </div>
 <div title="$:/state/''Registros de propósito general''">
-<pre>hide</pre>
+<pre>show</pre>
 </div>
 <div title="$:/state/folded/¿Qué es la ingeniería inversa?">
 <pre>show</pre>
@@ -13030,13 +13034,13 @@ Error message and password prompt
 <pre>close</pre>
 </div>
 <div title="$:/state/toc/post/¿Qué es la ingeniería inversa?-El servicio que se ofrece--1884527837">
-<pre>close</pre>
+<pre>open</pre>
 </div>
 <div title="$:/state/toc/post/¿Qué es la ingeniería inversa?-La estructura de un servicio--1884527837">
-<pre>close</pre>
+<pre>open</pre>
 </div>
 <div title="$:/state/toc/post/¿Qué es la ingeniería inversa?-Ocultar el funcionamiento de un servicio--1884527837">
-<pre>close</pre>
+<pre>open</pre>
 </div>
 <div title="$:/state/toc/post/El ejecutable-Código máquina x86--1884527837">
 <pre>open</pre>
@@ -13060,13 +13064,13 @@ Error message and password prompt
 <pre>open</pre>
 </div>
 <div title="$:/state/toc/post/El ejecutable/Código máquina x86-Discernir entre el contenido ejecutable y texto plano--1884527837">
-<pre>close</pre>
+<pre>open</pre>
 </div>
 <div title="$:/state/toc/post/El ejecutable/Código máquina x86-Discernir entre el contenido ejecutable y texto plano-179456027">
 <pre>close</pre>
 </div>
 <div title="$:/state/toc/post/El ejecutable/Código máquina x86-El texto plano--1884527837">
-<pre>close</pre>
+<pre>open</pre>
 </div>
 <div title="$:/state/toc/post/El ejecutable/Código máquina x86-El texto plano-179456027">
 <pre>close</pre>
@@ -13080,7 +13084,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Tabla de contenidos]] [[Acerca de este blog]]" title="$:/StoryList">
+<div list="[[Draft of 'Elementos de x86asm']] [[Introducción básica al lenguaje ensamblador]] [[Acerca de este blog]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div list="[[Tabla de contenidos]] $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" title="$:/tags/SideBar">
@@ -13230,14 +13234,26 @@ Sabiendo esto, surge el problema de como saber diferenciar entre cuando un conju
 <div order="2" tags="[[Código máquina x86]]" title="Discernir entre el contenido ejecutable y texto plano">
 <pre>El único modo de discernir entre el contenido de un archivo que se puede ejecutar y uno que es legible es unicamente posible por el contexto, es decir, que se debe tener indicios de donde está la información que se está intentando acceder.</pre>
 </div>
+<div draft.of="Elementos de x86asm" draft.title="Elementos de x86asm" tags="" title="Draft of 'Elementos de x86asm'">
+<pre>&lt;ul&gt;
+&lt;li style='list-style-type:none'&gt;
+  &lt;&lt;textSliderNoButton &quot;''Instrucciones''&quot; &quot;Son [[mnemónicos|http://sparksandflames.com/files/x86InstructionChart.html]] que realizan una acción sobre una dirección de la memoria o un registro. &quot;&gt;&gt;
+&lt;/li&gt;
+&lt;li style='list-style-type:none'&gt;
+ &lt;&lt;textSliderNoButton &quot;''Constantes''&quot; &quot;Pueden representar por ejemplo el valor de un carácter que ocupa un byte, el de un [[numero entero|https://es.wikipedia.org/wiki/Entero_(tipo_de_dato)]] con signo que por convenio suele ocupar cuatro bytes donde el primer byte denota el signo (0 positivo, 1 negativo). Una constante puede ser también la dirección de una memoria que se puede derreferenciar y obtener sus contenidos&quot;&gt;&gt;
+&lt;/li&gt;
+&lt;li style='list-style-type:none'&gt;
+ &lt;&lt;textSliderNoButton &quot;''Registros de propósito general''&quot; &quot;[[Hay 8 de 64 bits en total|https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture#General-Purpose_Registers_(GPR)_-_16-bit_naming_conventions]], y se dividen en registros de más pequeños de 32, 16 y 8 bits.&quot;&gt;&gt;
+&lt;/li&gt;
+&lt;li style='list-style-type:none'&gt;
+ &lt;&lt;textSliderNoButton &quot;''Etiquetas simbólicas''&quot; &quot;Favorecen al programador dándole la posibilidad de nombrar direcciones de memoria para acceder posteriormente a ellas sin tener que memorizar números. No están presentes en el código máquina pero pueden estar presentes en los metadatos (si se desea en la compilación) para facilitar el proceso de ingeniería inversa&quot;&gt;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</div>
 <div tags="wiki" title="Edición">
 <pre>! {{$:/core/images/tip}} Cambia el contenido de este blog ,,*,,
 
 Prueba a darle clic a el lápiz que se sitúa en la esquina derecha de cada recuadro.
-
-También, puedes abrir el menú que se abre dándole clic a la flecha de la esquina derecha de la página para añadir nuevos recuadros nuevos con el  `+` que está debajo del título del blog.
-
-
 
 ,,* los cambios solo se verán reflejados en tu navegador,,
 </pre>
@@ -13257,7 +13273,7 @@ Los principales conenidos de un archivo ejecutable son las [[instrucciones|Códi
 <div order="1" tags="[[Código máquina x86]]" title="El texto plano">
 <pre>Cuando se habla de texto plano, se habla de  la [[tabla de caracteres ASCII|https://es.wikipedia.org/wiki/ASCII]], que asocia a cada combinación de ocho unos y ceros (1 [[byte|https://es.wikipedia.org/wiki/Byte]]) un carácter.
 
-Ahora bien, en el momento en el que se habre un ejecutable, el contenido que se muestra en pantalla por un programa, en este caso un bloc de notas por ejemplo, se intenta interpretar los bytes de las intrucciones como caracteres; algo que es imposible ya que la mayoría de las intrucciones no están incluidas en en rango de la tabla ASCII.
+Ahora bien, en el momento en el que se habre un ejecutable, el contenido que se muestra en pantalla por un programa; en este caso un bloc de notas por ejemplo, se intenta interpretar los bytes de las intrucciones como caracteres. Esto esimposible ya que la mayoría de las instrucciones no están incluidas en en rango de la tabla ASCII.
 
 Caracteres mas complejos como los emojis como los emojis son combinaciones de caracteres que empiezan por un carácter fuera del rango ASCII. De este modo el intento de representar instrucciones como caracteres da como resultado símbolos aleatorios.</pre>
 </div>
@@ -13484,26 +13500,39 @@ square(int):
         ret
 ```
 
-Lo primero que se pude obserbar es que las instrucciones aplican el resultado al operando de la izquierda. También, la instrucción ret no toma ningún operando. Eso se debe a que el valor se aplica al registro eax por defecto.
+Lo primero que se pude obserbar es que las instrucciones aplican el resultado al operando de la izquierda. También, la instrucción `ret` no toma ningún operando. Eso se debe a que el valor se aplica al registro `eax` por defecto.
 
 Prueba a expandir el menú de `Compiler Explorer`.
-</pre>
+
+Si miras [[el uso de los registros de propósito general|https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture#General-Purpose_Registers_(GPR)_-_16-bit_naming_conventions]], verás que no necesariamente tiene que tener el uso que se desee, cada uno tiene una función y unos valores establecidos por defecto.
+
+El registro `rsp` toma como valor la dirección de la base de [[la pila o stack|https://en.wikibooks.org/wiki/X86_Disassembly/The_Stack]] (de ahí su nombre: register stack pointer). Esta es la dirección de memoria en la que se almacenará la variable que se pasa por la función. El valor de esta variable está almacenada en `rdi` (register source index). Con dos registros ya se tiene el lugar donde se puede almacenar la variable en un lugar que puede ser retornado. `DWORD PTR [rbp -4]` derreferencia la dirección de la memoria que está cuatro bytes por encima de `rbp`; 4 es el número de bytes que ocupa un número entero en la memoria. Prueba a cambiar el tipo de dato de `num` de `int` a `long int` y verás que se duplica el tamaño; esto se debe a que cualquier tipo de dato que tenga un `long` detrás ocupa el doble de espacio. Y por lo tanto la dereferenciación es diferente también: pasa de `DoubleWORD` a `QuadWORD`.
+
+Lo único que queda es aplicar la multiplicación al registro `eax` y vaciar la pila.</pre>
 </div>
 <div order="2" tags="[[¿Qué es la ingeniería inversa?]]" title="La estructura de un servicio">
 <pre>En esencia es la lógica interna que constituye a un servicio. Cuando se trata de un servicio que consiste en un producto informático, el [[código fuente|https://es.wikipedia.org/wiki/C%C3%B3digo_fuente]] es la manera más común de programar la lógica que se ejecutará en el dispositivo deseado.</pre>
 </div>
 <div order="3" tags="[[El ejecutable]]" title="La segmentación">
-<pre>Los anteriores contenidos que un ejecutable puede tener están ordenados en segmentos.</pre>
+<pre>Los anteriores contenidos que un ejecutable puede tener están ordenados en segmentos.
+
+&lt;$link
+to=&quot;https://upload.wikimedia.org/wikipedia/commons/7/77/Elf-layout--en.svg&quot;
+tooltip=&quot;Segmentación de un archivo ELF - Formato ejecutable propio de sistemas basados en Unix&quot;&gt;
+[img width=250 [https://upload.wikimedia.org/wikipedia/commons/7/77/Elf-layout--en.svg]]
+&lt;/$link&gt;
+
+Por ejemplo el segmento .rodata almacena datos de solo lectura y es en el segmento .text donde el código se ejecuta.</pre>
 </div>
 <div order="2" tags="[[El ejecutable]]" title="Los metadatos">
 <pre>!! Son un conjunto de datos que especifican información acerca del ejecutable (permisos de lectura y escritura por ejemplo). Estos datos se encuentran principalmente en el principio del ejecutable (encabezado), el principio de un [[segmento|La segmentación]] o al final del ejecutable.</pre>
 </div>
 <div order="3" tags="[[¿Qué es la ingeniería inversa?]]" title="Ocultar el funcionamiento de un servicio">
-<pre>Cuando el servicio que se ofrece de una pieza de software, el formato de un servicio será un archivo ejecutable que el usuario final puede utilizar dentro de su sistema operativo.
+<pre>Cuando el servicio que se ofrece de una pieza de software, el formato de un servicio será un archivo [[ejecutable|El ejecutable]] que el usuario final puede utilizar dentro de su sistema operativo.
 
 El acto de ocultar el comportamiento de un ejecutable radica en la compilación. Si intentas abrir un ejecutable con un bloc de notas prodrás ver como no tiene nada que ver con el código fuente que compilaste. Parece algo complejo porque de hecho lo es; la principal función de un compilador es subordinar esa complejidad mediante un lenguaje de alto nivel, que nos da la capacidad de poder ignorar los detalles que conllevan entender como un sistema operativo realmente ejecuta un programa.
 
-Un lenguaje de programación que permite determinar el comportamiento delejecutable deseado puede  entenderse y está escrito en texto plano: es legible y se puede escribir con el teclado.
+Un lenguaje de programación que permite determinar el comportamiento delejecutable deseado puede  entenderse y está escrito en [[texto plano|El texto plano]]: es legible y se puede escribir con el teclado.
 </pre>
 </div>
 <div order="4" tags="[[El ejecutable]]" title="Representación intermedia: Código ensamblador">
@@ -13523,6 +13552,9 @@ También, las instrucciones se pueden escribir como [[mnemónicos|http://sparksa
 &lt;&lt;folded &quot;Compiler Explorer&quot; &quot;Compiler Explorer&quot;&gt;&gt;
 
 </pre>
+</div>
+<div order="2" tags="[[Representación intermedia: Código ensamblador]]" title="Transpilación entre código máquina y código fuente">
+<pre></pre>
 </div>
 
 
