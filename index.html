@@ -227,6 +227,12 @@ Error message and password prompt
 
 <li>$:/state/toc/post/¿Qué es la ingeniería inversa?-¿Qué significa conocer la estructura de un proyecto?-179456027</li>
 
+<li>$:/state/toc/post/El ejecutable-Código máquina x86-179456027</li>
+
+<li>$:/state/toc/post/El ejecutable/Código máquina x86-Discernir entre el contenido ejecutable y texto plano-179456027</li>
+
+<li>$:/state/toc/post/El ejecutable/Código máquina x86-El texto plano-179456027</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
@@ -245,15 +251,21 @@ Error message and password prompt
 
 <li>Compiler explorer</li>
 
+<li>Discernir entre el contenido ejecutable y texto plano</li>
+
 <li>Edición</li>
 
 <li>El ejecutable</li>
 
 <li>El servicio que se ofrece</li>
 
+<li>El texto plano</li>
+
 <li>Índice</li>
 
 <li>La estructura de un servicio</li>
+
+<li>La segmentación</li>
 
 <li>Los metadatos</li>
 
@@ -12840,7 +12852,7 @@ Error message and password prompt
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
 <div created="20210426142813496" modified="20210426215039189" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210426214231163" modified="20210426214232099" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -12857,10 +12869,19 @@ Error message and password prompt
 <div title="$:/state/toc/post/¿Qué es la ingeniería inversa?-¿Qué significa conocer la estructura de un proyecto?-179456027">
 <pre>close</pre>
 </div>
+<div title="$:/state/toc/post/El ejecutable-Código máquina x86-179456027">
+<pre>open</pre>
+</div>
+<div title="$:/state/toc/post/El ejecutable/Código máquina x86-Discernir entre el contenido ejecutable y texto plano-179456027">
+<pre>close</pre>
+</div>
+<div title="$:/state/toc/post/El ejecutable/Código máquina x86-El texto plano-179456027">
+<pre>close</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Los metadatos]] [[Código máquina x86]] Índice [[El ejecutable]]" title="$:/StoryList">
+<div list="Índice [[Código máquina x86]] [[El texto plano]] [[Discernir entre el contenido ejecutable y texto plano]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210426201712178" modified="20210426201712178" title="$:/theme">
@@ -12991,10 +13012,21 @@ Error message and password prompt
 El contenido de este blog está alojado en [[un repositorio de GitHub|https://github.com/pablo2b/pablo2b.github.io]]; se puede hacer un seguimiento de la [[evolución|https://github.com/pablo2b/pablo2b.github.io/commits/main]] de las anteriores versiones de este blog.</pre>
 </div>
 <div order="1" tags="[[El ejecutable]]" title="Código máquina x86">
-<pre></pre>
+<pre>[[x86|https://es.wikipedia.org/wiki/X86]] es la familia de los procesadores que heredan la arquitectura de el procesador [[Intel 8086|https://es.wikipedia.org/wiki/Intel_8086_y_8088]].
+
+Esta familia de microprocesadores comparten un mismo [[conjunto de instrucciones(ISA)|https://es.wikipedia.org/wiki/Conjunto_de_instrucciones]] que se amplia conforme a los microchips que Intel lanza al mercado. Cada microchip cumple la característica que es retrocompatible con su anterior: es decir, que un ejecutable que funcionaba en el pasado sigue funcionando en el presente.
+
+El [[x86 ISA|http://ref.x86asm.net/coder32.html]] al ampliarse sucesivamente acumula las carácteristicas de sus anteriores especificaciones, lo que se traduce en una especificación que en el presente es muy compleja. Esto se aplica a el formato de una instrucción válida en x86; pero la idea en síntesis es que una combinación de ceros y unos (señales eléctricas concretas) constituyen una instrucción.
+
+Cualquier tipo de información en un ordenador se interpreta como un conjunto de señales eléctricas, incluso el texto que se muestra en pantalla que es interpretado  como un mapa de bits (matriz de ceros(señales alta) y unos(señales bajas)).
+
+Sabiendo esto, surge el problema de como saber diferenciar entre cuando un conjunto de bits expresan una instrucción o un conjunto de caracteres de [[texto plano|El texto plano]]. Y la solución a este problema es fácil: [[es imposible hacerlo sin contexto|Discernir entre el contenido ejecutable y texto plano]].</pre>
 </div>
 <div tags="blog" title="Compiler explorer">
 <pre>&lt;iframe width=&quot;800px&quot; height=&quot;200px&quot; src=&quot;https://gcc.godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:'int+test()+%7B%0A++return+5%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g62,filters:(b:'0',binary:'1',colouriseAsm:'0',commentOnly:'0',compileOnChange:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-O3',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'x86-64+gcc+6.2+(Editor+%231,+Compiler+%231)+C%2B%2B',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4&quot;&gt;&lt;/iframe&gt;</pre>
+</div>
+<div order="2" tags="[[Código máquina x86]]" title="Discernir entre el contenido ejecutable y texto plano">
+<pre>El único modo de discernir entre el contenido de un archivo que se puede ejecutar y uno que es legible es unicamente posible por el contexto, es decir, que se debe tener indicios de donde está la información que se está intentando acceder.</pre>
 </div>
 <div tags="wiki" title="Edición">
 <pre>! {{$:/core/images/tip}} Cambia el contenido de este blog ,,*,,
@@ -13009,7 +13041,9 @@ También, puedes abrir el menú que se abre dándole clic a la flecha de la esqu
 </pre>
 </div>
 <div order="2" tags="post" title="El ejecutable">
-<pre></pre>
+<pre>Un archivo ejecutable también se puede llamar archivo binario: debido a que sus contenidos no suelen representarse correctamente en [[texto plano|El texto plano]] que se pueda entender.
+
+Los principales conenidos de un archivo ejecutable son las [[instrucciones|Código máquina x86]], [[los metadatos|Los metadatos]] y el[[ &quot;espacio para almacenar variables&quot;|La segmentación]].</pre>
 </div>
 <div order="1" tags="[[¿Qué es la ingeniería inversa?]]" title="El servicio que se ofrece" type="">
 <pre>Que el funcionamiento de un servicio quede expuesto ante el usuario final no siempre interesa al proveedor. Esto se puede deber a razones de seguridad y/o comerciales:
@@ -13018,6 +13052,13 @@ También, puedes abrir el menú que se abre dándole clic a la flecha de la esqu
 * Si la estructura de un servicio es accesible es por defecto replicable 
 </pre>
 </div>
+<div order="1" tags="[[Código máquina x86]]" title="El texto plano">
+<pre>Cuando se habla de texto plano, se habla de  la [[tabla de caracteres ASCII|https://es.wikipedia.org/wiki/ASCII]], que asocia a cada combinación de ocho unos y ceros (1 [[byte|https://es.wikipedia.org/wiki/Byte]]) un carácter.
+
+Ahora bien, en el momento en el que se habre un ejecutable, el contenido que se muestra en pantalla por un programa, en este caso un bloc de notas por ejemplo, se intenta interpretar los bytes de las intrucciones como caracteres; algo que es imposible ya que la mayoría de las intrucciones no están incluidas en en rango de la tabla ASCII.
+
+Caracteres mas complejos como los emojis como los emojis son combinaciones de caracteres que empiezan por un carácter fuera del rango ASCII. De este modo el intento de representar instrucciones como caracteres da como resultado símbolos aleatorios.</pre>
+</div>
 <div tags="blog" title="Índice">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-expandable &quot;post&quot; &quot;nsort[order]&quot;&gt;&gt;
@@ -13025,6 +13066,9 @@ También, puedes abrir el menú que se abre dándole clic a la flecha de la esqu
 </div>
 <div order="2" tags="[[¿Qué es la ingeniería inversa?]]" title="La estructura de un servicio">
 <pre>En esencia es la lógica interna que constituye a un servicio. Cuando se trata de un servicio que consiste en un producto informático, el [[código fuente|https://es.wikipedia.org/wiki/C%C3%B3digo_fuente]] es la manera más común de programar la lógica que se ejecutará en el dispositivo deseado.</pre>
+</div>
+<div order="3" tags="[[El ejecutable]]" title="La segmentación">
+<pre></pre>
 </div>
 <div order="2" tags="[[El ejecutable]]" title="Los metadatos">
 <pre></pre>
