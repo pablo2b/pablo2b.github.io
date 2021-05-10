@@ -281,6 +281,8 @@ Error message and password prompt
 
 <li>$:/state/toc/post/El ejecutable/Representación intermedia: Código ensamblador-Introducción básica al lenguaje ensamblador--1884527837</li>
 
+<li>$:/state/toc/post/El ejecutable/Representación intermedia: Código ensamblador-Transpilación entre código máquina y código fuente--1884527837</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
@@ -302,6 +304,8 @@ Error message and password prompt
 <li>Compiler Explorer</li>
 
 <li>Discernir entre el contenido ejecutable y texto plano</li>
+
+<li>Draft of 'Transpilación entre código máquina y código fuente'</li>
 
 <li>Edición</li>
 
@@ -331,7 +335,7 @@ Error message and password prompt
 
 <li>Tabla de contenidos</li>
 
-<li>Transpilación entre código máquina y código fuente</li>
+<li>Transpilación entre código máquina y código fuente: optimizaciones</li>
 
 </ul>
 </p>
@@ -13079,10 +13083,13 @@ Error message and password prompt
 <div title="$:/state/toc/post/El ejecutable/Representación intermedia: Código ensamblador-Introducción básica al lenguaje ensamblador--1884527837">
 <pre>close</pre>
 </div>
+<div title="$:/state/toc/post/El ejecutable/Representación intermedia: Código ensamblador-Transpilación entre código máquina y código fuente--1884527837">
+<pre>close</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Introducción básica al lenguaje ensamblador]] [[Transpilación entre código máquina y código fuente]] [[Elementos de x86asm]] [[Acerca de este blog]]" title="$:/StoryList">
+<div list="[[Transpilación entre código máquina y código fuente: optimizaciones]] [[Acerca de este blog]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div list="[[Tabla de contenidos]] $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" title="$:/tags/SideBar">
@@ -13231,6 +13238,18 @@ Sabiendo esto, surge el problema de como saber diferenciar entre cuando un conju
 </div>
 <div order="2" tags="[[Código máquina x86]]" title="Discernir entre el contenido ejecutable y texto plano">
 <pre>El único modo de discernir entre el contenido de un archivo que se puede ejecutar y uno que es legible es unicamente posible por el contexto, es decir, que se debe tener indicios de donde está la información que se está intentando acceder.</pre>
+</div>
+<div title="Draft of 'Transpilación entre código máquina y código fuente'">
+<pre>Considera la siguiente función en lenguaje C:
+
+```C++
+int div(int num)
+{
+    return num/2;
+}
+```
+
+</pre>
 </div>
 <div tags="wiki" title="Edición">
 <pre>! {{$:/core/images/tip}} Cambia el contenido de este blog ,,*,,
@@ -13482,7 +13501,7 @@ square(int):
         ret
 ```
 
-Lo primero que se pude obserbar es que las instrucciones aplican el resultado al operando de la izquierda. También, la instrucción `ret` no toma ningún operando. Eso se debe a que el valor se aplica al registro `eax` por defecto.
+Lo primero que se puede obserbar es que las instrucciones aplican el resultado al operando de la izquierda. También, la instrucción `ret` no toma ningún operando. Eso se debe a que el valor se aplica al registro `eax` por defecto.
 
 Prueba a expandir el menú de `Compiler Explorer`.
 
@@ -13535,8 +13554,22 @@ También, las instrucciones se pueden escribir como [[mnemónicos|http://sparksa
 
 </pre>
 </div>
-<div order="2" tags="[[Representación intermedia: Código ensamblador]]" title="Transpilación entre código máquina y código fuente">
-<pre></pre>
+<div order="2" tags="[[Representación intermedia: Código ensamblador]]" title="Transpilación entre código máquina y código fuente: optimizaciones">
+<pre>Considera la siguiente función en lenguaje C:
+
+```c
+int div(int num)
+{
+    return num/2;
+}
+```
+
+Prueba a introducir este código en el desensamblador de compiler explorer. Lo pimero que se puede observar es que no hay ninguna instrucción de dividir, ni ninguna palabra que se asemeje a la palabra dividir. Esta instrucción en este caso tendría que ser `idiv`; pero no está presente.
+
+Esto es un ejemplo de las optimizaciones que el compilador hace y una de las principales razones por las que no se puede [[transpilar|https://es.wikipedia.org/wiki/Transpilador]] código máquina o lenguaje ensamblador a código fuente; no existe ninguna manera mecánica de hacer tal interpretación. Solo se puede  compilar el código fuente y obtener el código máquina.
+
+La optimización que se ha llevado a cabo consiste en evitar la instrucción de dividir ya que no es tan rápida. Se evita la instrucción `idiv` componiendo diferentes instrucciones.
+</pre>
 </div>
 
 
